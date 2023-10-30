@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import UserItem from './UserItem';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import {useSearchParams } from 'react-router-dom';
 
 const Users = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const [searchValue, setSearchValue] = useState(searchQuery);
   const [users, setUsers] = useState([]);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     setSearchValue(searchQuery); // Set searchValue to match searchQuery
